@@ -1,0 +1,8 @@
+# Misc.
+*.idea
+
+*.pyc
+
+# Individual files
+keys.py
+db.sqlite3

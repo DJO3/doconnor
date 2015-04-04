@@ -1,8 +1,11 @@
 # Misc.
 *.idea
-
 *.pyc
+blog/migrations/*
 
 # Individual files
 keys.py
 db.sqlite3
+
+
+

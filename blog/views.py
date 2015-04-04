@@ -1,9 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+from django.views import generic
+from blog import models
 
 
-def index(request):
-    context_dict = {}
-    return render(request, 'blog/index.html', context_dict)
+class BlogIndex(generic.ListView):
+    queryset = models.Entry.posts.published()
+    template_name = 'blog/index.html'
+    paginate_by = 5
+
+
+class BlogDetail(generic.DetailView):
+    model = models.Entry
+    template_name = 'blog/post.html'
 
 
 def about(request):

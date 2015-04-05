@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from keys import django_secret
+from keys import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -110,6 +110,5 @@ STATICFILES_DIRS = (
 )
 
 # Static Media
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Absolute path to the media directory
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Absolute path to the media directory
 MEDIA_URL = '/media/'

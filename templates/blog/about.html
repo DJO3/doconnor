@@ -1,10 +1,11 @@
 {% extends 'blog/base.html' %}
+{% load twitter_feed_tags %}
 
 {% load staticfiles %}
 
 {% block title %}About{% endblock %}
 
-{% block body_block %}
+{% block blog_twitter %}
 
     <div class="page-header">
         <h3>about</h3>
@@ -12,7 +13,15 @@
     </div>
 
     <div>
+        <div class="tweet">
+            {% for tweet in tweets %}
+                <blockquote class="twitter-tweet" lang="en">
+                    <a href="https://twitter.com/{{ tweet.screen_name }}/status/{{ tweet.id_str }}"></a>
+                </blockquote>
+            {% endfor %}
+        </div>
     </div>
+
 
 
 {% endblock %}

@@ -40,7 +40,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'django_markdown',
-    'twitter_feed',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,8 +112,3 @@ STATICFILES_DIRS = (
 # Static Media
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Absolute path to the media directory
 MEDIA_URL = '/media/'
-
-TWITTER_FEED_CONSUMER_PUBLIC_KEY = consumer_key
-TWITTER_FEED_CONSUMER_SECRET = consumer_secret
-TWITTER_FEED_OPEN_AUTH_TOKEN = access_token
-TWITTER_FEED_OPEN_AUTH_SECRET = access_token_secret

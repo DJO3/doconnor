@@ -2,12 +2,16 @@
 {% load django_markdown %}
 
 {% block blog_entries %}
-  <div class="post">
-    <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
-    <p class="meta">
-      {{ object.created }} |
-      Tagged under {{  object.tags.all|join:", " }}
-    </p>
-    {{ object.body|markdown }}
-  </div>
+
+    <div class="page-header">
+        <h3>{{ object.title }}</h3>
+        <div class="meta" id="tag">
+            {{ object.created }} | Tags: {{  object.tags.all|join:", " }}
+        </div>
+    </div>
+
+    <div class="post">
+        {{ object.body|markdown }}
+    </div>
+
 {% endblock %}

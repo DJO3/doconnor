@@ -9,11 +9,15 @@
     <link rel="icon" href="/static/images/favicon.ico">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/blog.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <style>
          body {
            padding-top: 70px;
          }
+         .sidebar {
+           float: left;
+        }
     </style>
 
   </head>
@@ -35,6 +39,11 @@
         <div class="collapse navbar-collapse" id="hamburger-navigation">
          <ul class="nav navbar-nav navbar-right" role="menu">
 
+                    <li><a href="mailto:dev@pytools.org"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href="https://github.com/DJO3"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/djoconnor3"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/DJOconnor3"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://keybase.io/djo3#show-public"><i class="fa fa-key"></i></a></li>
              <li><a href="{% url 'about' %}">About</a></li>
 
          </ul>
@@ -44,21 +53,27 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
 
-            <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p>
+        <div class="col-sm-4 col-md-3 sidebar">
 
-            {% block side_block %}{% endblock %}
+            <div>
+                <h4>tweets & things</h4>
+            </div>
+
+            <a class="twitter-timeline" href="https://twitter.com/DJOconnor3" data-widget-id="595360725322887168">
+                Tweets by @DJOconnor3
+            </a>
+
+            {% block side_block %}
+            {% endblock %}
 
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+        <div class="col-sm-8 col-sm-offset-4 col-md-9 col-md-offset-3 main">
            <div class="blog-main">
-                {% block blog_entries %}
 
-                {% endblock %}
-                {% block blog_twitter %}
-
-                {% endblock %}
+               {% block blog_entries %}
+               {% endblock %}
 
                {% if is_paginated %}
                 <ul class="pager">
@@ -80,6 +95,6 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/static/js/ie10-viewport-bug-workaround.js"></script>
-    <script async src="/static/js/widgets.js" charset="utf-8"></script>
+    <script src="/static/js/timeline.js"></script>
   </body>
 </html>

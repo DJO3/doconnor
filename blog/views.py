@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from django.views import generic
 from blog import models
-from twitter_feed.models import Tweet
 
 
 class BlogIndex(generic.ListView):
@@ -16,5 +15,10 @@ class BlogDetail(generic.DetailView):
 
 
 def about(request):
-    context_dict = {'tweets': Tweet.objects.all()[:5]}
+    context_dict = {}
     return render(request, 'blog/about.html', context_dict)
+
+
+def edu(request):
+    context_dict = {}
+    return render(request, 'blog/edu.html', context_dict)

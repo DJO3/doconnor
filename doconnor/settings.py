@@ -112,3 +112,5 @@ STATICFILES_DIRS = (
 # Static Media
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Absolute path to the media directory
 MEDIA_URL = '/media/'
+
+MARKDOWN_STYLE = "/static/css/codehilite.css"

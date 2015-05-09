@@ -8,4 +8,5 @@ urlpatterns = patterns(
     url(r'^feed/$', feed.LatestPosts(), name='feed'),
     url(r'^entry/(?P<slug>\S+)$', views.BlogDetail.as_view(), name="entry_detail"),
     url(r'^about/$', views.about, name='about'),
+    url(r'^edu/$', views.edu, name='edu'),
 )

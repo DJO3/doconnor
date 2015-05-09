@@ -6,7 +6,7 @@
     <div class="page-header">
         <h3>{{ object.title }}</h3>
         <div class="meta" id="tag">
-            {{ object.created }} | Tags: {{  object.tags.all|join:", " }}
+            {{ object.created|markdown:"codehilite" }} | Tags: {{  object.tags.all|join:", " }}
         </div>
     </div>
 

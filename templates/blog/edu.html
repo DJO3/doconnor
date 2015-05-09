@@ -1,0 +1,150 @@
+{% extends 'blog/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}edu{% endblock %}
+
+{% block blog_entries%}
+
+
+<div class="page-header">
+    <h3>MOOCs and tutorials</h3>
+
+</div>
+
+<div class="blog-main">
+    <div id="accordion" class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1. Codecademy</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><a href="http://www.codecademy.com/en/tracks/python">Python</a></p>
+                    <p>Learn to program in Python, a powerful language used by sites like YouTube and Dropbox.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://www.codecademy.com/en/tracks/web">HTML & CSS</a></p>
+                    <p>Learn how to create websites by structuring and styling your pages with HTML and CSS.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://www.codecademy.com/en/tracks/jquery">jQuery</a></p>
+                    <p>Learn how to make your websites interactive and create animations by using jQuery.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://www.codecademy.com/en/tracks/web">JavaScript</a></p>
+                    <p>Learn the fundamentals of JavaScript, the programming language of the Web.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2. edX</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                 <div class="panel-body">
+                    <p><a href="https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-0">MITx: 6.00.1x Introduction to Computer Science and Programming</a></p>
+                    <p>6.00.1x is an introduction to computer science as a tool to solve real-world analytical problems.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-0">MITx: 6.00.2x Introduction to Computational Thinking and Data Science</a></p>
+                    <p>6.00.2x is an introduction to using computation to understand real-world phenomena.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="https://www.edx.org/course/introduction-bootstrap-tutorial-microsoft-dev203x">Microsoft: DEV203x Introduction to Bootstrap</a></p>
+                    <p>Learn how to use Bootstrap to implement mobile first web pages with CSS and JavaScript.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-2">LFS101x.2 Introduction to Linux</a></p>
+                    <p>Develop a good working knowledge of Linux using both the graphical interface and command line, covering the major Linux distribution families.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3. MongoDB University</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><a href="https://university.mongodb.com/courses/M101P/about">MM101P: MongoDB For Python Developers</a></p>
+                    <p>Learn everything you need to know to get started building a MongoDB-based app. This course will go over basic installation, JSON, schema design, querying, insertion of data, indexing and working with the Python driver. We will also cover working in sharded and replicated environments. In the course, you will build a blogging platform, backed by MongoDB. A brief Python introduction is included in the course.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4. Udacity</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><a href="https://www.udacity.com/course/intro-to-algorithms--cs215">CS215: Intro to Algorithms</a></p>
+                    <p>By the end of this class you will understand key concepts needed to devise new algorithms for graphs and other important data structures and to evaluate the efficiency of these algorithms.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">5. Tutorials & Guides</a>
+                </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><a href="http://www.tangowithdjango.com/book17/">Tango With Django</a></p>
+                    <p>A beginner's guide to web development with Python 2.7 / Django 1.7</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="https://thinkster.io/django-angularjs-tutorial/">Building Web Applications with Django and AngularJS</a></p>
+                    <p>Each tutorial we release has a specific goal. In this tutorial, that goal is to give you a brief overview of how Django and AngularJS play together and how these technologies can be combined to build amazing web applications. Furthermore, we place a heavy emphasis on building good engineering habits. This includes everything from considering the tradeoffs that come from making architectural decisions, to maintaining high quality code throughout your project. While these things may not sound like fun, they are key to becoming a well-rounded software developer.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">Build a Reddit Bot</a></p>
+                    <p>Build a simple Reddit Bot that will do two things:
+                        <ol>
+                            <li>It will monitor a particular subreddit for new posts, and when someone posts “I love Python”, it will reply “Me too!”.</li>
+                            <li>It will also monitor all comments to recent posts, and if it finds one that says “I hate Python”, it will post a link to /r/learnpython and ask the commenter to ask a question there.</li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="https://realpython.com/blog/python/web-scraping-with-scrapy-and-mongodb/">Web Scraping With Scrapy and MongoDB</a></p>
+                    <p>In this article we’re going to build a scraper for an actual freelance gig where the client wants a Python program to scrape data from Stack Overflow to grab new questions (question title and URL). Scraped data should then be stored in MongoDB. It’s worth noting that Stack Overflow has an API, which can be used to access the exact same data. However, the client wanted a scraper, so a scraper is what he got.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://arunrocks.com/recreating-the-building-a-blog-in-django-screencast/">Recreating the “Building a Blog in Django” Screencast</a></p>
+                    <p>Build a fully functional blog using Django 1.7. Includes Syntax changes in Python 3.4, QuerySets and Custom Managers, Admin and ModelAdmin, Rich-text posts with django-markdown, Generic Class-based Views, Tags, RSS Feeds, Migrations, and Running testcases.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">6. Miscellaneous</a>
+                </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p><a href="http://startupclass.samaltman.com/lists/about">CS183B: How to Start a Startup</a></p>
+                    <p>Everything we know about how to start a startup, for free, from some of the world experts. CS183B is a class we taught at Stanford. It’s a sort of one-class business course for people who want to start startups.</p>
+                </div>
+                <div class="panel-body">
+                    <p><a href="http://www.checkio.org/user/DJO3/">CheckiO</a></p>
+                    <p>CheckiO is the game for coders. Improve your code with the help of our community. Create missions and challenge your peers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

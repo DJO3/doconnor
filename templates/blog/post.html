@@ -1,17 +1,19 @@
 {% extends "blog/base.html" %}
-{% load django_markdown %}
 
 {% block blog_entries %}
 
     <div class="page-header">
         <h3>{{ object.title }}</h3>
         <div class="meta" id="tag">
-            {{ object.created|markdown:"codehilite" }} | Tags: {{  object.tags.all|join:", " }}
+            <p class="entry-meta">
+            {{ object.date_created }} tagged under {% for tag in object.tags.all %}<a href="{% url "tag_index" slug=tag.slug %}">{{ tag }}</a>{% endfor %}
+            </p>
         </div>
     </div>
 
-    <div class="post">
-        {{ object.body|markdown }}
+    <div class="post-meta">
+        {{ object.body_html|safe  }}
     </div>
+
 
 {% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from django.views import generic
 from blog import models
 
@@ -21,4 +21,17 @@ def about(request):
 
 def edu(request):
     context_dict = {}
+    orgs = models.EduOrg.orgs.published()
+    context_dict['orgs'] = orgs
     return render(request, 'blog/edu.html', context_dict)
+
+
+class TagIndex(generic.ListView):
+    template_name = 'blog/index.html'
+    paginate_by = 5
+
+    def get_queryset(self):
+        slug = self.kwargs['slug']
+        tag = models.Tag.objects.get(slug=slug)
+        results = models.Entry.posts.filter(tags=tag)
+        return results

@@ -2,8 +2,6 @@
 
 {% load staticfiles %}
 
-{% load django_markdown %}
-
 {% block title %}home{% endblock %}
 
 {% block blog_entries %}
@@ -16,7 +14,7 @@
         <div class="post">
             <h2><a href="{% url "entry_detail" slug=post.slug %}">{{ post.title }}</a></h2>
             <p class="meta" id="tag">{{ post.created }}</p>
-            {{ post.body|markdown }}
+            {{ post.body_html|safe }}
         </div>
     {% endfor %}
 

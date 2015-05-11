@@ -48,7 +48,7 @@ class Entry(models.Model):
 
 class Course(models.Model):
     title = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
+    description = models.CharField(max_length=1000)
     url = models.URLField(max_length=200)
 
     def __str__(self):
@@ -61,6 +61,7 @@ class EduOrg(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
     courses = models.ManyToManyField(Course)
+    slug = models.SlugField(max_length=200, unique=True)
 
     orgs = EntryQuerySet.as_manager()
 

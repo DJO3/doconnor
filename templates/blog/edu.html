@@ -19,10 +19,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#{{ org.title }}">{{ org.title }}</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{ org.slug }}">{{ org.title }}</a>
                 </h4>
             </div>
-            <div id="{{ org.title }}" class="panel-collapse collapse">
+            <div id="{{ org.slug }}" class="panel-collapse collapse">
                 {% for course in org.courses.all|dictsort:"title" %}
                 <div class="panel-body">
                     <p><a href="{{ course.url }}">{{ course.title }}</a></p>

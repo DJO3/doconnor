@@ -19,6 +19,8 @@ def add_org(title, publish, slug):
 
 
 def populate():
+
+    # Codecademy
     title = 'Python'
     description = "Learn to program in Python, a powerful language used by sites like YouTube and Dropbox."
     url = "http://www.codecademy.com/en/tracks/python"
@@ -39,8 +41,36 @@ def populate():
     url = "http://www.codecademy.com/en/tracks/javascript"
     python_cat = add_course(title, description, url)
 
-    org = "Codecademy"
-    add_org(org, True, slugify(org))
+    # edX
+    title = 'MITx: 6.00.1x Introduction to Computer Science and Programming'
+    description = "6.00.1x is an introduction to computer science as a tool to solve real-world analytical problems."
+    url = "https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-0"
+    python_cat = add_course(title, description, url)
+
+    title = 'MITx: 6.00.2x Introduction to Computational Thinking and Data Science'
+    description = "6.00.2x is an introduction to using computation to understand real-world phenomena."
+    url = "https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-0"
+    python_cat = add_course(title, description, url)
+
+    title = 'Microsoft: DEV203x Introduction to Bootstrap'
+    description = "Learn how to use Bootstrap to implement mobile first web pages with CSS and JavaScript."
+    url = "https://www.edx.org/course/introduction-bootstrap-tutorial-microsoft-dev203x"
+    python_cat = add_course(title, description, url)
+
+    title = 'LFS101x.2 Introduction to Linux'
+    description = "Develop a good working knowledge of Linux using both the graphical interface and command line, \
+    covering the major Linux distribution families."
+    url = "https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-2"
+    python_cat = add_course(title, description, url)
+
+    orgs = ["Codecademy", "edX", "MongoDB University", "Udacity"]
+    misc = ["Miscellaneous", "Tutorials and Guides"]
+    for org in orgs:
+        add_org(org, True, slugify(org))
+    for org in misc:
+        add_org(org, False, slugify(org))
+
+
 
     # Print out Courses and Organizations
     for c in Course.objects.all():

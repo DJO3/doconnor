@@ -21,7 +21,7 @@ def about(request):
 
 def edu(request):
     context_dict = {}
-    orgs = models.EduOrg.orgs.published()
+    orgs = models.EduOrg.orgs.all()
     context_dict['orgs'] = orgs
     return render(request, 'blog/edu.html', context_dict)
 

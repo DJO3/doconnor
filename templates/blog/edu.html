@@ -9,13 +9,32 @@
 
 <div class="page-header">
     <h3>MOOCs and tutorials</h3>
-
 </div>
 
 <div class="blog-main>">
     <div id="accordion" class="panel-group">
-        {% for org in orgs|dictsort:"title" %}
+        {% for org in orgs|dictsort:"title.lower" %}
         {% if org.publish %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{ org.slug }}">{{ org.title }}</a>
+                </h4>
+            </div>
+            <div id="{{ org.slug }}" class="panel-collapse collapse">
+                {% for course in org.courses.all|dictsort:"title" %}
+                <div class="panel-body">
+                    <p><a href="{{ course.url }}">{{ course.title }}</a></p>
+                    <p>{{ course.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for org in orgs|dictsort:"title.lower" %}
+        {% if not org.publish and org.title == 'Miscellaneous' or org.title == "Tutorials and Guides" %}
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">

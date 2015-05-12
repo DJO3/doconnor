@@ -22,7 +22,7 @@
                 </h4>
             </div>
             <div id="{{ org.slug }}" class="panel-collapse collapse">
-                {% for course in org.courses.all|dictsort:"title" %}
+                {% for course in org.courses.all|dictsort:"title.lower" %}
                 <div class="panel-body">
                     <p><a href="{{ course.url }}">{{ course.title }}</a></p>
                     <p>{{ course.description }}</p>

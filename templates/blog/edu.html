@@ -16,9 +16,9 @@
         {% for org in orgs|dictsort:"title.lower" %}
         {% if org.publish %}
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#{{ org.slug }}">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#{{ org.slug }}">{{ org.title }}</a>
+                    <a href="#{{ org.slug }}">{{ org.title }}</a>
                 </h4>
             </div>
             <div id="{{ org.slug }}" class="panel-collapse collapse">
@@ -36,9 +36,9 @@
         {% for org in orgs|dictsort:"title.lower" %}
         {% if not org.publish and org.title == 'Miscellaneous' or org.title == "Tutorials and Guides" %}
         <div class="panel panel-default">
-            <div class="panel-heading">
+            <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#{{ org.slug }}">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#{{ org.slug }}">{{ org.title }}</a>
+                    <a href="#{{ org.slug }}">{{ org.title }}</a>
                 </h4>
             </div>
             <div id="{{ org.slug }}" class="panel-collapse collapse">

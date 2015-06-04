@@ -14,7 +14,12 @@ class EntryAdmin(MarkdownModelAdmin):
 class EduOrgAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
 
+
+class AboutAdmin(MarkdownModelAdmin):
+    formfield_overrides = {TextField: {'widget': AdminMarkdownWidget}}
+
 admin.site.register(models.Entry, EntryAdmin)
 admin.site.register(models.Tag)
 admin.site.register(models.EduOrg, EduOrgAdmin)
 admin.site.register(models.Course)
+admin.site.register(models.About, AboutAdmin)

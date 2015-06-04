@@ -15,12 +15,13 @@ class BlogDetail(generic.DetailView):
 
 
 def about(request):
-    context_dict = {}
+    context_dict = dict()
+    context_dict['about'] = models.About.posts.published()
     return render(request, 'blog/about.html', context_dict)
 
 
 def edu(request):
-    context_dict = {}
+    context_dict = dict()
     orgs = models.EduOrg.orgs.all()
     context_dict['orgs'] = orgs
     return render(request, 'blog/edu.html', context_dict)

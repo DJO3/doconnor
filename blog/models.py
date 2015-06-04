@@ -75,3 +75,21 @@ class EduOrg(models.Model):
         verbose_name = "Organization"
         verbose_name_plural = "Organizations"
         ordering = ["-title"]
+
+
+class About(models.Model):
+    title = models.CharField(max_length=200)
+    publish = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    text = models.TextField()
+    posts = EntryQuerySet.as_manager()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "About"
+        verbose_name_plural = "About"
+        ordering = ["-created"]
+

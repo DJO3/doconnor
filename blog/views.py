@@ -24,6 +24,7 @@ def edu(request):
     context_dict = dict()
     orgs = models.EduOrg.orgs.all()
     context_dict['orgs'] = orgs
+    context_dict['edu'] = models.Edu.posts.published()
     return render(request, 'blog/edu.html', context_dict)
 
 

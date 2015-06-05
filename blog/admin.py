@@ -18,8 +18,13 @@ class EduOrgAdmin(admin.ModelAdmin):
 class AboutAdmin(MarkdownModelAdmin):
     formfield_overrides = {TextField: {'widget': AdminMarkdownWidget}}
 
+
+class EduAdmin(MarkdownModelAdmin):
+    formfield_overrides = {TextField: {'widget': AdminMarkdownWidget}}
+
 admin.site.register(models.Entry, EntryAdmin)
 admin.site.register(models.Tag)
 admin.site.register(models.EduOrg, EduOrgAdmin)
 admin.site.register(models.Course)
 admin.site.register(models.About, AboutAdmin)
+admin.site.register(models.Edu, EduAdmin)

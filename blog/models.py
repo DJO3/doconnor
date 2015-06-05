@@ -93,3 +93,19 @@ class About(models.Model):
         verbose_name_plural = "About"
         ordering = ["-created"]
 
+
+class Edu(models.Model):
+    title = models.CharField(max_length=200)
+    publish = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    text = models.TextField()
+    posts = EntryQuerySet.as_manager()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "Edu"
+        verbose_name_plural = "Edu"
+        ordering = ["-created"]

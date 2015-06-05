@@ -11,7 +11,7 @@
     </div>
 
     {% for post in object_list %}
-        <div class="post">
+        <div class="post post-meta">
             <h2><a href="{% url "entry_detail" slug=post.slug %}">{{ post.title }}</a></h2>
             <p class="meta" id="tag">{{ post.created }}</p>
             {{ post.body_html|safe }}

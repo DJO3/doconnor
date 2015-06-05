@@ -125,3 +125,8 @@ body {
 #tag {
     font-size: 12px;
 }
+.post-meta {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #dddddd;
+}

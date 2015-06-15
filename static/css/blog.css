@@ -130,3 +130,9 @@ body {
     border-bottom-width: 1px;
     border-bottom-color: #dddddd;
 }
+
+.post-meta img {
+  display: block;
+    width: auto;
+    max-width: 100%;
+}

@@ -109,3 +109,14 @@ class Edu(models.Model):
         verbose_name = "Edu"
         verbose_name_plural = "Edu"
         ordering = ["-created"]
+
+
+class EntryImage(models.Model):
+    title = models.CharField(max_length=200, unique=True, blank=False)
+    slug = models.SlugField(max_length=200, unique=True, blank=False)
+    image = models.ImageField(upload_to='blog_images')
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.title

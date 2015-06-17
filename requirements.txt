@@ -1,6 +1,10 @@
-Django==1.8
+Django==1.8.2
 django-admin-bootstrapped==2.5.0
 django-markdown==0.8.4
+django-sslify==0.2.7
 Markdown==2.6.1
 markdown2==2.3.0
+Pillow==2.8.2
 Pygments==2.0.2
+
+

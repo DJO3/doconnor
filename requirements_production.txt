@@ -1,0 +1,13 @@
+-f /usr/share/pip-wheels
+boto==2.38.0
+Django==1.8.2
+django-admin-bootstrapped==2.5.0
+django-markdown==0.8.4
+django-sslify==0.2.7
+-e git+https://github.com/jschneier/django-storages-redux.git@47f373ef6f18e467844aa67b06cb4736d9cad958#egg=django_storages_redux-master
+Markdown==2.6.1
+markdown2==2.3.0
+mysql-connector-python==2.0.4
+Pillow==2.8.2
+Pygments==2.0.2
+wheel==0.24.0

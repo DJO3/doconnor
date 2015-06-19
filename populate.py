@@ -89,6 +89,17 @@ def populate():
     python_course = add_course(title, description, url)
     orgs[org].append(title)
 
+    title = 'W3Cx: HTML5.1x Learn HTML5 from W3C'
+    description = "In this course, you will:  1) Learn the new simplified HTML5\
+     tags, and how to use microdata, 2) Play with the audio and video tags, 3) \
+     Draw and animate fun Web graphics, 4) Discover the newest HTML5 forms, 5) \
+     Understand why accessibility is important, 6) Test the basic APIs, such as\
+      Web storage and geolocation, 7) Practice coding techniques thanks to \
+      multiple interactive examples."
+    url = "https://www.edx.org/course/learn-html5-w3c-w3cx-html5-1x"
+    python_course = add_course(title, description, url)
+    orgs[org].append(title)
+
     # MongoDB University
     org = "MongoDB University"
     orgs[org] = []
@@ -166,6 +177,14 @@ def populate():
     description = "CheckiO is the game for coders. Improve your code with the help of our community. Create missions \
     and challenge your peers."
     url = "http://www.checkio.org/user/DJO3/"
+    python_course = add_course(title, description, url)
+    misc[org].append(title)
+
+    title = "Using Amazon S3 to Store your Django Site's Static and Media Files"
+    description = "Describe how to set up an S3 bucket with the proper \
+    permissions and configuration, how to upload static and media files from \
+    Django to S3, and how to serve the files from S3 when people visit your site."
+    url = "https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/"
     python_course = add_course(title, description, url)
     misc[org].append(title)
 

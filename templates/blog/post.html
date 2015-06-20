@@ -6,7 +6,7 @@
         <h3>{{ object.title }}</h3>
         <div class="meta" id="tag">
             <p class="entry-meta">
-            {{ object.date_created }} tagged under {% for tag in object.tags.all %}<a href="{% url "tag_index" slug=tag.slug %}">{{ tag }}</a>{% endfor %}
+            {{ object.date_created }} tagged under {% for tag in object.tags.all %}<a href="{% url "tag_index" slug=tag.slug %}">{{ tag }}</a> {% endfor %}
             </p>
         </div>
     </div>

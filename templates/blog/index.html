@@ -4,6 +4,50 @@
 
 {% block title %}home{% endblock %}
 
+{% block tweets %}
+
+    <div>
+        <h4>tweets & things</h4>
+
+        <a class="twitter-timeline" href="https://twitter.com/DJOconnor3" data-widget-id="595360725322887168" height="300">
+                    Tweets by @DJOconnor3
+        </a>
+    </div>
+
+{% endblock %}
+
+{% block archives %}
+
+    <h4>archives</h4>
+
+    {% for post in object_list %}
+
+        <li>{{ post.created }}</li>
+
+    {% endfor %}
+
+{% endblock %}
+
+{% block tag_cloud %}
+
+    <h4>tags</h4>
+
+
+
+        <div class="meta" id="tag">
+            <p class="entry-meta">
+
+            {% for post in object_list %}
+                {% for tag in post.tags.all %}<a href="{% url "tag_index" slug=tag.slug %}">{{ tag }}</a> {% endfor %}
+            {% endfor %}
+
+            </p>
+        </div>
+
+
+
+{% endblock %}
+
 {% block blog_entries %}
 
     <div class="page-header">

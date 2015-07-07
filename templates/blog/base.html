@@ -68,15 +68,14 @@
     <div class="container-fluid">
         <div class="col-sm-4 col-md-3 sidebar">
 
-            <div>
-                <h4>tweets & things</h4>
-            </div>
 
-            <a class="twitter-timeline" href="https://twitter.com/DJOconnor3" data-widget-id="595360725322887168">
-                Tweets by @DJOconnor3
-            </a>
+            {% block tweets %}
+            {% endblock %}
 
-            {% block side_block %}
+            {% block archives %}
+            {% endblock %}
+
+            {% block tag_cloud %}
             {% endblock %}
 
         </div>

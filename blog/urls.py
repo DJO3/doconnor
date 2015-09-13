@@ -2,6 +2,7 @@ from django.conf.urls import patterns, url
 from blog import views, feed
 
 
+
 urlpatterns = patterns(
     '',
     url(r'^$', views.BlogIndex.as_view(), name="index"),
